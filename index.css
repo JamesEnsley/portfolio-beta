@@ -31,7 +31,6 @@ body::-webkit-scrollbar-thumb{
 /* space for navbar */
 main{
   margin-left:5rem;
-  padding:1rem;
 }
 
 /* navbar */
@@ -176,7 +175,7 @@ path{
   }
 }
 
-/* info styles */
+/* main info styles */
 .center{
   display: flex;
   justify-content:center;
@@ -259,7 +258,65 @@ i:active{
   color:rgba(80, 187, 230,0.5);
 }
 
+/*------ABOUT ME-------*/
 
+.about-me{
+  height:400px;
+  display:flex;
+  margin-top:500px;
+}
 
+.about-title{
+  font-size:50px;
+  font-weight:bold;
+}
 
+.side-by-side{
+  flex:100%;
+}
+
+.slider-frame{
+  overflow:hidden;
+  height:450px;
+  width:450px;
+  margin-left:100px;
+  margin-top:20px;
+  border-radius:100px;
+}
+
+/*---------SLIDE ANIMATION--------*/
+
+@-webkit-keyframes slide_animation{
+  0% {left:0px;}
+  10%{left:0px;}
+  20%{left:450px;}
+  30%{left:450px;}
+  40%{left:900px;}
+  50%{left:900px;}
+  60%{left:450px;}
+  70%{left:450px;}
+  80%{left:0px;}
+  90%{left:0px;}
+  100%{left:0px;}
+}
+
+.slide-images{
+  width:1350px;
+  height:450px;
+  margin: 0 0 0 -900px;
+  position: relative;
+  -webkit-animation-name:slide_animation;
+  -webkit-animation-duration:33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-play-state: running;
+}
+
+.img-container{
+  height:450px;
+  width:450px;
+  object-fit:cover;
+  position:relative;
+  float:left;
+}
 
