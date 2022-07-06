@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src = "script.js" defer></script>
 </head>
 
 <body>
@@ -153,19 +154,14 @@
 
       <!--about me title and pfp image-->
       <div class="about-me">
-        <div>
-          <img src="images/testingimg.jpg" style="margin-top:25px;height:300px;width:300px;border-radius:150px;object-fit:cover;margin-left:300px;transform: translatey(0px);
+        <div class = 'pfp'>
+          <img src="images/testingimg.jpg" style="margin-top:25px;height:300px;width:300px;border-radius:150px;object-fit:cover;margin-left:350px;transform: translatey(0px);
               animation: float 6s ease-in-out infinite;">
         </div>
         <div>
-          <p class="about-title" style="margin-top:75px;font-size:70px; margin-left:100px; width:500px;"><span
-              class=auto-type2></span></p>
-          <p style="font-size:30px; margin-top:20px; width:900px; margin-left:100px;">Mechanical Engineering (Co-op)
-            Student at McMaster University</p>
-          
-          <p style="margin-left:100px;color:rgb(80, 187, 230);">
-            _______________________________________________________________________________________________________________________________________
-          </p>
+          <p class="about-title">James Ensley</span></p>
+          <p class="about-subtitle"><span class=auto-type2></span></p>
+          <p class="about-line"> _______________________________________________________________________________________________________________________________________</p>
           
         </div>
       </div>
@@ -173,10 +169,21 @@
       <!--about me info-->
       <div style="display:flex;">
         <div class="side-by-side">
-          <p
-            style="font-size:40px; margin-top:100px; width:700px; margin-left:325px; text-align:center;line-height:60px;">
-            Throughout my childhood I would help my dad out in making wooden tops, bowls and his metal lathes, inspiring
-            me to <span class="highlight">pursue mechanical engineering C:</span></p>
+          <p class = "about-info-left">Throughout my childhood I would help my dad out in making wooden tops, bowls and his metal lathes, inspiring me to <span class="highlight"> pursue mechanical engineering C:</span></p>
+          <div class = "slider-frame2">
+            <div class = "slide-images2">
+              <div class="img-container">
+                <img src="images/smoll james.jpg">
+              </div>
+              <div class="img-container">
+                <img src="images/shop image.jpg">
+              </div>
+              <div class="img-container">
+                <img src="images/cart image.jpg">
+              </div>
+            </div>
+          </div>
+        
         </div>
         <div class="side-by-side">
           <div class="slider-frame">
@@ -192,14 +199,15 @@
               </div>
             </div>
           </div>
+          <p class = "about-info-right">I love working closely in teams to develop solutions to complex problems, especially those pertaining <span class="highlight">mechanics</span> and <span class="highlight">aerodynamics</span></p>
         </div>
       </div>
       
       <!--typing function my name-->
       <script>
         var typed = new Typed(".auto-type2", {
-          strings: ["James Ensley"],
-          typeSpeed: 100,
+          strings: ["Mechanical Engineering (Co-op) Student at McMaster University"],
+          typeSpeed: 25,
           backSpeed: 20,
           loop: false
         })
