@@ -20,13 +20,38 @@ function setup(){
     entries.forEach(entry => {
       if (entry.isIntersecting){
         entry.target.classList.add('left-slide');
-        right.unobserve(entry.target);   
+        left.unobserve(entry.target);   
+      } else {
+        return;
+      }
+    })
+  },options);
+
+  const up = new IntersectionObserver((entries,up) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('up-slide');
+        up.unobserve(entry.target);   
       } else {
         return;
       }
     })
   },options);
   
+  /* UP SLIDE DIVS */
+  const hometop = document.querySelector('.top-info');
+  up.observe(hometop);
+
+  const homemid = document.querySelector('.mid-info');
+  up.observe(homemid);
+
+  const homebot = document.querySelector('.bot-info');
+  up.observe(homebot);
+
+  const frogeimg = document.querySelector('.froge');
+  up.observe(frogeimg);
+
+
   /* RIGHT SLIDE DIVS*/
   const title = document.querySelector('.about-title');
   right.observe(title);

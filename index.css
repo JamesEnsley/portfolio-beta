@@ -218,6 +218,18 @@ path{
   margin-left: calc(50% - 520px/2)
 }
 
+.top-info,.mid-info,.bot-info,.froge{
+  opacity:0;
+  position:relative;
+  bottom:-40px;
+  transition: all 0.8s ease-out;
+}
+
+.up-slide{
+  opacity:1;
+  bottom:0;
+}
+
 /* floating image */
 @keyframes float {
 	0% {
@@ -333,17 +345,21 @@ i:active{
 /*---------SLIDE ANIMATION--------*/
 
 @-webkit-keyframes slide_animation{
-  0% {left:0px;}
-  10%{left:0px;}
-  20%{left:450px;}
-  30%{left:450px;}
-  40%{left:900px;}
-  50%{left:900px;}
-  60%{left:450px;}
-  70%{left:450px;}
-  80%{left:0px;}
-  90%{left:0px;}
-  100%{left:0px;}
+  0% {left:-450px;}
+  7%{left:-450px;}
+  14%{left:0px;}
+  21%{left:0px;}
+  28%{left:450px;}
+  35%{left:450px;}
+  42%{left:900px;}
+  49%{left:900px;}
+  56%{left:450px;}
+  63%{left:450px;}
+  70%{left:0px;}
+  77%{left:0px;}
+  84%{left:-450px;}
+  91%{left:-450px;}
+  100%{left:-450px;}
 }
 
 @-webkit-keyframes slide_animation2{
@@ -379,7 +395,7 @@ i:active{
 }
 
 .slide-images{
-  width:1350px;
+  width:1800px;
   height:450px;
   margin: 0 0 0 -900px;
   position: relative;
@@ -410,3 +426,8 @@ i:active{
   float:left;
 }
 
+.fade-out{
+  opacity:0;
+  position: relative;
+  transition: all 0.8s ease-out;
+}
