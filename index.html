@@ -70,7 +70,7 @@
 
       <!--skills-->
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#skills" class="nav-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
             <path
@@ -107,8 +107,8 @@
   </nav>
 
   <main>
-    <!--main text-->
-    <section>
+    <!--home page-->
+    <section id = "home">
       <div class="center">
         <p class="top-info">Hi, I am <span class="highlight"> James Ensley</span></p>
         <p class="mid-info"><span class="auto-type"></span></p>
@@ -162,10 +162,19 @@
           <p class="about-title">James Ensley</span></p>
           <p class="about-subtitle"><span class=auto-type2></span></p>
           <p class="about-line"> _______________________________________________________________________________________________________________________________________</p>
-          
         </div>
       </div>
       
+      <!--typing function my name-->
+      <script>
+        var typed = new Typed(".auto-type2", {
+          strings: ["Mechanical Engineering (Co-op) Student at McMaster University"],
+          typeSpeed: 25,
+          backSpeed: 20,
+          loop: false
+        })
+      </script>
+
       <!--about me info-->
       <div style="display:flex;">
         <div class="side-by-side">
@@ -206,19 +215,111 @@
           
         </div>
       </div>
-      
-      <!--typing function my name-->
-      <script>
-        var typed = new Typed(".auto-type2", {
-          strings: ["Mechanical Engineering (Co-op) Student at McMaster University"],
-          typeSpeed: 25,
-          backSpeed: 20,
-          loop: false
-        })
-      </script>
     </section>
     
+    <!--skills page-->
+    <section id = "skills">
+      <div class = "skills">
+        <p class = "skills-title">Hard Skills</p>
+        
+        <div class = "inventor"><span class = "skills-title" style = "margin-bottom:1000px;font-size:50px;margin-top:0px;margin-left:70px;">Inventor</span>
+          <div class="outer">
+            <div class="inner">
+              <div id="inventor-number">
+                
+              </div>
+            </div>
+          </div>
+              <svg class = "skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                      <stop offset="0%" stop-color="#e91e63" />
+                      <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class = "inventor-circle" cx="180" cy="180" r="150" stroke-linecap="round" />
+              </svg>
+        </div>
+
+        <div class = "solidworks" style = "position:relative; top:-450px; left:500px;"><span class = "skills-title" style = "font-size:50px;margin-top:0px;margin-left:35px;">Solidworks</span>
+          <div class="outer">
+            <div class="inner">
+              <div id="solidworks-number">
+                
+              </div>
+            </div>
+          </div>
+              <svg class = "skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                      <stop offset="0%" stop-color="#e91e63" />
+                      <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class = "solidworks-circle" cx="180" cy="180" r="150" stroke-linecap="round" />
+              </svg>
+        </div>
+
+        <div class = "granta" style = "position:relative; top:-885px; left:1000px;"><span class = "skills-title" style = "justify-content:left;font-size:35px;margin-top:0px;margin-left:35px;">Granta Edupack</span>
+          <div class="outer">
+            <div class="inner">
+              <div id="granta-number">
+                
+              </div>
+            </div>
+          </div>
+              <svg class = "skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                      <stop offset="0%" stop-color="#e91e63" />
+                      <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class = "granta-circle" cx="180" cy="180" r="150" stroke-linecap="round" />
+              </svg>
+        </div>
+
+      </div>
+    </section>
+
   </main>
+
+  <script>
+    let inventornumber = document.getElementById("inventor-number");
+    let solidworksnumber = document.getElementById("solidworks-number");
+    let grantanumber = document.getElementById("granta-number");
+
+    let icounter = 0;
+    setInterval(()=> {
+      if(icounter == 80){
+        clearInterval();
+      } else {
+        icounter += 1;
+        inventornumber.innerHTML = icounter + "%";
+      }
+    }, 20)
+
+    let jcounter = 0;
+    setInterval(()=> {
+      if(jcounter == 50){
+        clearInterval();
+      } else {
+        jcounter += 1;
+        solidworksnumber.innerHTML = jcounter + "%";
+      }
+    }, 20)
+
+    let kcounter = 0;
+    setInterval(()=> {
+      if(kcounter == 30){
+        clearInterval();
+      } else {
+        kcounter += 1;
+        grantanumber.innerHTML = kcounter + "%";
+      }
+    }, 20)
+  </script>
+
 
 </body>
 

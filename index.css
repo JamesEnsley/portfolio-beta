@@ -10,6 +10,10 @@ body{
   overflow-y: scroll;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 p{
   color: white;
   font-family: 'Lato', Arial;
@@ -430,4 +434,101 @@ i:active{
   opacity:0;
   position: relative;
   transition: all 0.8s ease-out;
+}
+
+.skills-title{
+  font-family: 'Lato', Arial;
+  color:white;
+  font-size:70px;
+  font-weight:bold;
+  margin-top:300px;
+  margin-left:350px; 
+  width:500px;
+}
+
+.inventor, .solidworks, .granta{
+  width:300px;
+  height:300px;
+  margin-top:150px;
+  margin-left:350px;
+  position:relative;
+}
+
+.outer{
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  margin-top:100px;
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  padding:20px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),  
+              -6px -6px 10px -1px rgba(0,0,0,0.15)  
+
+} 
+
+.inner{
+  height:260px;
+  width:260px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(0,0,0,0.15),
+              -0.5px -0.5px 0px rgba(0,0,0,1),
+              0.5px 0.5px 0px rgba(0,0,0,0.15),
+              0 12px 10px -10px rgba(0,0,0,0.05);   
+}
+
+#inventor-number,#solidworks-number,#granta-number{
+  font-family: 'Lato', Arial;
+  font-weight:600px;
+  font-size:50px;
+  color:white;
+}
+
+.inventor-circle,.solidworks-circle,.granta-circle{
+  fill:none;
+  stroke:url(#GradientColor);
+  stroke-width:40px;
+  stroke-dasharray: 944;
+  stroke-dashoffset: 944;
+}
+
+.inventor-circle{
+  animation:inventor 2s linear forwards;
+}
+
+.solidworks-circle{
+  animation: solidworks 2s linear forwards;
+}
+
+.granta-circle{
+  animation: granta 2s linear forwards;
+}
+
+.skill-bar{
+  position:relative;
+  top:-350px;
+  left:-10px;
+}
+
+@keyframes inventor{
+  100%{
+    stroke-dashoffset: 189;
+  }
+}
+
+@keyframes solidworks{
+  100%{
+    stroke-dashoffset: 472;
+  }
+}
+
+@keyframes granta{
+  100%{
+    stroke-dashoffset: 629;
+  }
 }
