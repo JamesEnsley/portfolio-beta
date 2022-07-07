@@ -1,0 +1,16 @@
+.soft-box{
+  justify-content: center;
+  justify-items: center;
+  width:600px;
+  margin-left:1200px;
+  height:675px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+}
+
+.arrow{
+  margin-left:50px;
+  margin-top:50px;
+  width:50px;
+  fill: linear-gradient(135deg,rgba(236,0,140,1)0%,rgba(252,103,103,1));
+}
+

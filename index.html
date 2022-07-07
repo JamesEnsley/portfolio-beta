@@ -10,6 +10,9 @@
 
   <!-- imports seperate css file with text styles -->
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="skill-bar.css">
+  <link rel="stylesheet" href="skill-circle.css">
+  <link rel="stylesheet" href="softskills.css">
 
   <!-- imports font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +29,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <script src = "script.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="skillsanimation.js" defer></script>
 </head>
 
 <body>
@@ -108,7 +112,7 @@
 
   <main>
     <!--home page-->
-    <section id = "home">
+    <section id="home">
       <div class="center">
         <p class="top-info">Hi, I am <span class="highlight"> James Ensley</span></p>
         <p class="mid-info"><span class="auto-type"></span></p>
@@ -150,21 +154,23 @@
 
 
     <!--about page-->
-    <section id = "about-me">
+    <section id="about-me">
 
       <!--about me title and pfp image-->
       <div class="about-me">
-        <div class = 'pfp'>
+        <div class='pfp'>
           <img src="images/testingimg.jpg" style="margin-top:25px;height:300px;width:300px;border-radius:150px;object-fit:cover;margin-left:350px;transform: translatey(0px);
               animation: float 6s ease-in-out infinite;">
         </div>
         <div>
           <p class="about-title">James Ensley</span></p>
           <p class="about-subtitle"><span class=auto-type2></span></p>
-          <p class="about-line"> _______________________________________________________________________________________________________________________________________</p>
+          <p class="about-line">
+            _______________________________________________________________________________________________________________________________________
+          </p>
         </div>
       </div>
-      
+
       <!--typing function my name-->
       <script>
         var typed = new Typed(".auto-type2", {
@@ -178,9 +184,10 @@
       <!--about me info-->
       <div style="display:flex;">
         <div class="side-by-side">
-          <p class = "about-info-left">Throughout my childhood I would help my dad out in making wooden tops, bowls and his metal lathes, inspiring me to <span class="highlight"> pursue mechanical engineering C:</span></p>
-          <div class = "slider-frame2">
-            <div class = "slide-images2">
+          <p class="about-info-left">Throughout my childhood I would help my dad out in making wooden tops, bowls and
+            his metal lathes, inspiring me to <span class="highlight"> pursue mechanical engineering C:</span></p>
+          <div class="slider-frame2">
+            <div class="slide-images2">
               <div class="img-container">
                 <img src="images/P1 Group.png">
               </div>
@@ -192,7 +199,7 @@
               </div>
             </div>
           </div>
-        
+
         </div>
         <div class="side-by-side">
           <div class="slider-frame">
@@ -211,77 +218,130 @@
               </div>
             </div>
           </div>
-          <p class = "about-info-right">I love working closely in teams to develop solutions to complex problems, especially those pertaining <span class="highlight">mechanics</span> and <span class="highlight">aerodynamics</span></p>
+          <p class="about-info-right">I love working closely in teams to develop solutions to complex problems,
+            especially those pertaining <span class="highlight">mechanics</span> and <span
+              class="highlight">aerodynamics</span></p>
+
+        </div>
+      </div>
+    </section>
+
+    <!--skills page-->
+    <section id="skills">
+      <div class="side-by-side">
+        <div class="skills">
+          <p class="skills-title" style="font-size:70px;text-align:center;width:1200px;">Skills Dashboard</p>
+          <div class="circleskills">
+            <div class="inventor"><span class="skills-title" style="margin-left:30px;">Inventor</span>
+              <div class="outer">
+                <div class="inner">
+                  <div id="inventor-number">
+
+                  </div>
+                </div>
+              </div>
+              <svg class="skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class="inventor-circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="solidworks"><span class="skills-title" style="margin-left:20px;">Solidworks</span>
+              <div class="outer">
+                <div class="inner">
+                  <div id="solidworks-number">
+
+                  </div>
+                </div>
+              </div>
+              <svg class="skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class="solidworks-circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="granta"><span class="skills-title" style="margin-left:-15px;">GrantaEDUPack</span>
+              <div class="outer">
+                <div class="inner">
+                  <div id="granta-number">
+
+                  </div>
+                </div>
+              </div>
+              <svg class="skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200px" height="160px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class="granta-circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+              </svg>
+            </div>
+
+          </div>
+
+          <div class="linear-skills">
+            <h1>OTHER SKILLS</h1>
+            <li>
+              <h3>html</h3>
+              <span class="bar"><span class="html-skill"></span></span>
+            </li>
+            <li>
+              <h3>css</h3>
+              <span class="bar"><span class="css-skill"></span></span>
+            </li>
+            <li>
+              <h3>java</h3>
+              <span class="bar"><span class="java-skill"></span></span>
+            </li>
+            <li>
+              <h3>python</h3>
+              <span class="bar"><span class="python-skill"></span></span>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="side-by-side">
+        <div class="soft-box">
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z" />
+          </svg>
+          <h3 style = "font-size:30px;margin-left:120px;top:-55px;position:relative;">Problem Solving</h3>
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z" />
+          </svg>
+          <h3 style = "font-size:30px;margin-left:120px;top:-55px;position:relative;">Excellent Communicator</h3>
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z" />
+          </svg>
+          <h3 style = "font-size:30px;margin-left:120px;top:-55px;position:relative;">Collaborative</h3>
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z" />
+          </svg>
+          <h3 style = "font-size:30px;margin-left:120px;top:-55px;position:relative;">Persistent</h3>
           
         </div>
       </div>
     </section>
-    
-    <!--skills page-->
-    <section id = "skills">
-      <div class = "skills">
-        <p class = "skills-title">Hard Skills</p>
-        
-        <div class = "inventor"><span class = "skills-title" style = "margin-bottom:1000px;font-size:50px;margin-top:0px;margin-left:70px;">Inventor</span>
-          <div class="outer">
-            <div class="inner">
-              <div id="inventor-number">
-                
-              </div>
-            </div>
-          </div>
-              <svg class = "skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
-                <defs>
-                  <linearGradient id="GradientColor">
-                      <stop offset="0%" stop-color="#e91e63" />
-                      <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle class = "inventor-circle" cx="180" cy="180" r="150" stroke-linecap="round" />
-              </svg>
-        </div>
-
-        <div class = "solidworks" style = "position:relative; top:-450px; left:500px;"><span class = "skills-title" style = "font-size:50px;margin-top:0px;margin-left:35px;">Solidworks</span>
-          <div class="outer">
-            <div class="inner">
-              <div id="solidworks-number">
-                
-              </div>
-            </div>
-          </div>
-              <svg class = "skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
-                <defs>
-                  <linearGradient id="GradientColor">
-                      <stop offset="0%" stop-color="#e91e63" />
-                      <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle class = "solidworks-circle" cx="180" cy="180" r="150" stroke-linecap="round" />
-              </svg>
-        </div>
-
-        <div class = "granta" style = "position:relative; top:-885px; left:1000px;"><span class = "skills-title" style = "justify-content:left;font-size:35px;margin-top:0px;margin-left:35px;">Granta Edupack</span>
-          <div class="outer">
-            <div class="inner">
-              <div id="granta-number">
-                
-              </div>
-            </div>
-          </div>
-              <svg class = "skill-bar" xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
-                <defs>
-                  <linearGradient id="GradientColor">
-                      <stop offset="0%" stop-color="#e91e63" />
-                      <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle class = "granta-circle" cx="180" cy="180" r="150" stroke-linecap="round" />
-              </svg>
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
   <script>
@@ -290,8 +350,8 @@
     let grantanumber = document.getElementById("granta-number");
 
     let icounter = 0;
-    setInterval(()=> {
-      if(icounter == 80){
+    setInterval(() => {
+      if (icounter == 80) {
         clearInterval();
       } else {
         icounter += 1;
@@ -300,8 +360,8 @@
     }, 20)
 
     let jcounter = 0;
-    setInterval(()=> {
-      if(jcounter == 50){
+    setInterval(() => {
+      if (jcounter == 50) {
         clearInterval();
       } else {
         jcounter += 1;
@@ -310,8 +370,8 @@
     }, 20)
 
     let kcounter = 0;
-    setInterval(()=> {
-      if(kcounter == 30){
+    setInterval(() => {
+      if (kcounter == 30) {
         clearInterval();
       } else {
         kcounter += 1;
