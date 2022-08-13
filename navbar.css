@@ -1,0 +1,142 @@
+/* navbar */
+.navbar{
+  position: fixed;
+  background-color:rgb(44,44,44);
+  transition: 100ms ease;
+}
+
+.logo{
+  font-weight:bold;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  text-align:center;
+  color: rgb(70, 195, 245);
+  background:rgba(80, 187, 230,0.5);
+  font-size:1.5rem;
+  letter-spacing: 0.3ch;
+  width:100%;
+}
+
+.logo svg{
+  transform: rotate(-180deg);
+  transition: transform 1000ms;
+}
+
+.navbar:hover .logo svg{
+  transform: rotate(-140deg);
+}
+
+.navbar-nav{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  height:100%;
+}
+
+.nav-item{
+  width:100%;
+  transition:200ms;
+}
+
+.nav-item:hover{
+  background: rgb(32,32,32);
+}
+
+.nav-item:last-child{
+  margin-top:auto;
+}
+
+.nav-link{
+  display:flex;
+  align-items: center;
+  height: 5rem;
+  color: rgb(32,32,32);
+  text-decoration:none;
+  transition: 600ms;
+}
+
+.link-text{
+  color: rgb(70, 195, 245);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 38px;
+  line-height: 100%;
+  width: 231px;
+  display:none;
+  margin-left:1rem;
+  transition: 600ms;
+}
+
+.nav-link svg{
+  min-width:2rem;
+  margin: 0 1.5rem;
+}
+
+path{
+  fill:rgb(70, 195, 245);
+  width:100%;
+}
+
+/* small screen navbar*/
+@media only screen and (max-width:600px){
+  .navbar{
+    bottom:0;
+    width:100vw;
+    height:5rem;
+  }
+
+  .navbar:hover{
+    width:100vw;
+  }
+
+  .path{
+    width:20%;
+  }
+
+  .path:hover{
+    width:20%;
+  }
+
+  .logo{
+    display:none;
+  }
+
+  .navbar-nav{
+    flex-direction:row;
+  }
+
+  .nav-link{
+    justify-content: center;
+  }
+
+  main{
+    margin:0;
+  }
+
+}
+
+/* large screen navbar */
+@media only screen and (min-width:600px){
+  .navbar{
+    top:0;
+    width:5rem;
+    height:100vh;
+  }
+  
+  
+  .navbar:hover{
+    width:16rem;
+    transition: width 300ms;
+  }
+
+  .navbar:hover .link-text{
+    display:inline;
+    width:16rem;
+
+    transition: opacity 600ms;
+  }
+}

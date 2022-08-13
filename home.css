@@ -1,0 +1,137 @@
+/* default styles */
+body{
+  background-color: rgb(33,33,33);
+  max-width: 100%;
+  overflow-x: hidden;
+  height:5900px;
+  margin:0;
+  scrollbar-width:0;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+p{
+  color: white;
+  font-family: 'Lato', Arial;
+}
+
+/* scroll bar */
+body::-webkit-scrollbar{
+  width:0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+  background-color:rgb(32,32,32);
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color:rgba(80, 187, 230,0.5);
+}
+
+/* space for navbar */
+main{
+  margin-left:5rem;
+}
+
+/* main info styles */
+.center{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  display:block;
+  height: 175px;
+}
+
+.top-info{
+  font-size: 25px;
+  line-height: 38px;
+  line-height: 100%;
+  width: 231px;
+  margin-top: 180px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 231px/2);
+}
+
+.highlight{
+  color:rgb(70, 195, 245);
+  text-decoration: underline;
+}
+
+.mid-info{
+  font-size: 32px;
+  line-height: 38px;
+  line-height: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 457px/2)
+}
+
+.bot-info{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 38px;
+  line-height: 100%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: calc(50% - 520px/2)
+}
+
+.top-info,.mid-info,.bot-info,.froge{
+  opacity:0;
+  position:relative;
+  bottom:-40px;
+  transition: all 0.8s ease-out;
+}
+
+.up-slide{
+  opacity:1;
+  bottom:0;
+}
+
+/* floating image */
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.img{
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+/* social media icon styles */
+.social-media{
+  font-size:30px;
+  color:rgb(80, 187, 230);
+  margin-left:calc(50% - 92px/2);
+}
+
+i{
+  transition: rgba 0.15s;
+}
+
+i:hover{
+  color:rgba(80, 187, 230,0.7);
+}
+
+i:active{
+  color:rgba(80, 187, 230,0.5);
+}
+
+
+
+

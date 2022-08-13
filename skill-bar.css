@@ -47,7 +47,7 @@ h3{
 .bar span{
   height:20px;
   float:left;
-  background:linear-gradient(135deg,rgba(236,0,140,1)0%,rgba(252,103,103,1));
+  background:linear-gradient(135deg,rgb(80, 187, 230) 0%,#7F53AC);
 }
 
 .html-skill{

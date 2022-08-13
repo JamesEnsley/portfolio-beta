@@ -15,7 +15,6 @@
   color:white;
   font-size:25px;
   font-weight:bold;
-  margin-top:300px;
   margin-left:350px; 
   width:800px;
   margin-bottom:100px;
@@ -24,7 +23,6 @@
 .inventor,.solidworks,.granta{
   width:160px;
   height:160px;
-  margin-top:150px;
   margin-left:350px;
   position:relative;
 }
@@ -79,15 +77,15 @@
 }
 
 .inventor-circle{
-  animation:inventor 2s linear forwards;
+  animation: inventor 3s linear forwards;
 }
 
 .solidworks-circle{
-  animation: solidworks 2s linear forwards;
+  animation: solidworks 3s linear forwards;
 }
 
 .granta-circle{
-  animation: granta 2s linear forwards;
+  animation: granta 3s linear forwards;
 }
 
 .skill-bar{
