@@ -1,0 +1,70 @@
+.portfolio-title{
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  font-size:70px;
+  font-weight:bold;
+  margin-bottom:25px;
+  margin-left:350px; 
+  width:1200px;
+  
+}
+
+.project{
+  width:350px;
+  height:350px;
+  margin-top:50px;
+  margin-left:100px;
+  background:rgb(80, 187, 230);
+  transition: 200ms ease;
+  position:relative;
+}
+
+.slider-frame3{
+  overflow:hidden;
+  height:300px;
+  width:350px;
+}
+
+.slide-images3{
+  width:350px;
+  height:1350px;
+  margin: -900px 0 0 0;
+  position: relative;
+  -webkit-animation-name:slide_animation2;
+  -webkit-animation-duration:33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-play-state: running;
+}
+
+.project:hover{
+  transition: 200ms ease;
+  transform: scale(1.1);
+}
+
+.project-subtitles{
+  font-weight:bold;
+  font-size:30px;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  text-decoration: none;
+}
+
+a:link{
+  text-decoration:none;
+}
+
+.row-1,.row-2,.port-title{
+  opacity:0;
+  position: relative;
+  bottom:-40px;
+  transition: all 0.8s ease-out;
+}
+
+.up-slide{
+  opacity:1;
+  bottom:0;
+}
+

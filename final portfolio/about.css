@@ -1,0 +1,161 @@
+/*------ABOUT ME-------*/
+
+.about-me{
+  height:400px;
+  display:flex;
+  margin-top:500px;
+}
+
+.about-title{
+  font-size:70px;
+  font-weight:bold;
+  margin-top:75px;
+  margin-left:100px; 
+  width:500px;
+}
+
+.about-subtitle{
+  font-size:30px; 
+  width:900px; 
+  margin-left:100px;
+}
+
+.about-line{
+  margin-left:100px;
+  color:rgb(80, 187, 230);
+}
+
+.about-info-left{
+  font-size:40px; 
+  margin-top:100px; 
+  width:700px; 
+  margin-left:325px; 
+  text-align:center;
+  line-height:60px;
+}
+
+.about-info-right{
+  font-size:40px; 
+  margin-top:300px; 
+  width:700px; 
+  text-align:center;
+  line-height:60px;
+}
+
+.side-by-side{
+  flex:100%;
+}
+
+.about-title,.about-subtitle,.about-line,.about-info-left,.pfp,.slider-frame2{
+  opacity:0;
+  position: relative;
+  left: -40px;
+  transition: all 0.8s ease-out;
+}
+
+.slider-frame,.about-info-right{
+  opacity:0;
+  position: relative;
+  right: -40px;
+  transition: all 0.8s ease-out;
+}
+
+.right-slide{
+  opacity: 1;
+  left:0;
+}
+
+.left-slide{
+  opacity:1;
+  right:0;
+}
+
+/*---------SLIDE ANIMATION--------*/
+
+@-webkit-keyframes slide_animation{
+  0% {left:-450px;}
+  7%{left:-450px;}
+  14%{left:0px;}
+  21%{left:0px;}
+  28%{left:450px;}
+  35%{left:450px;}
+  42%{left:900px;}
+  49%{left:900px;}
+  56%{left:450px;}
+  63%{left:450px;}
+  70%{left:0px;}
+  77%{left:0px;}
+  84%{left:-450px;}
+  91%{left:-450px;}
+  100%{left:-450px;}
+}
+
+@-webkit-keyframes slide_animation2{
+  0% {top:0px;}
+  10%{top:0px;}
+  20%{top:450px;}
+  30%{top:450px;}
+  40%{top:900px;}
+  50%{top:900px;}
+  60%{top:450px;}
+  70%{top:450px;}
+  80%{top:0px;}
+  90%{top:0px;}
+  100%{top:0px;}
+}
+
+.slider-frame{
+  overflow:hidden;
+  height:450px;
+  width:450px;
+  margin-left:100px;
+  margin-top:20px;
+  border-radius:100px;
+}
+
+.slider-frame2{
+  overflow:hidden;
+  height:450px;
+  width:450px;
+  margin-left:350px;
+  margin-top:300px;
+  border-radius:100px;
+}
+
+.slide-images{
+  width:1800px;
+  height:450px;
+  margin: 0 0 0 -900px;
+  position: relative;
+  -webkit-animation-name:slide_animation;
+  -webkit-animation-duration:33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-play-state: running;
+}
+
+.slide-images2{
+  width:450px;
+  height:1350px;
+  margin: -900px 0 0 0;
+  position: relative;
+  -webkit-animation-name:slide_animation2;
+  -webkit-animation-duration:33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-play-state: running;
+}
+
+.img-container{
+  height:450px;
+  width:450px;
+  object-fit:cover;
+  position:relative;
+  float:left;
+}
+
+.fade-out{
+  opacity:0;
+  position: relative;
+  transition: all 0.8s ease-out;
+}

@@ -1,0 +1,112 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Lato', Arial;
+}
+
+.circleskills{
+  margin-left:0px;
+  width:2000px;
+}
+
+.skills-title{
+  font-family: 'Lato', Arial;
+  color:white;
+  font-size:25px;
+  font-weight:bold;
+  margin-left:350px; 
+  width:800px;
+  margin-bottom:100px;
+}
+
+.inventor,.solidworks,.granta{
+  width:160px;
+  height:160px;
+  margin-left:350px;
+  position:relative;
+}
+
+.solidworks{
+  position:relative;
+  margin-top:-160px;
+  margin-left:600px;
+}
+
+.granta{
+  position:relative;
+  margin-top:-160px;
+  margin-left:850px;
+}
+
+.outer{
+  height:160px;
+  width:160px;
+  border-radius:50%;
+  padding:20px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),  
+              -6px -6px 10px -1px rgba(0,0,0,0.15);
+}
+.inner{
+  height:120px;
+  width:120px;
+  border-radius:50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(0,0,0,0.15),
+              -0.5px -0.5px 0px rgba(0,0,0,1),
+              0.5px 0.5px 0px rgba(0,0,0,0.15),
+              0 12px 10px -10px rgba(0,0,0,0.05);   
+}
+
+#inventor-number,#solidworks-number,#granta-number{
+  font-family: 'Lato', Arial;
+  font-weight:600px;
+  font-size:30px;
+  color:white;
+  position:relative;
+  top:40px;
+  left:30px;
+}
+
+.inventor-circle,.solidworks-circle,.granta-circle{
+  fill:none;
+  stroke:url(#GradientColor);
+  stroke-width:20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+.inventor-circle{
+  animation: inventor 3s linear forwards;
+}
+
+.solidworks-circle{
+  animation: solidworks 3s linear forwards;
+}
+
+.granta-circle{
+  animation: granta 3s linear forwards;
+}
+
+.skill-bar{
+  position:absolute;
+  top:30px;
+}
+
+@keyframes inventor{
+  100%{
+    stroke-dashoffset: 189;
+  }
+}
+
+@keyframes solidworks{
+  100%{
+    stroke-dashoffset: 236;
+  }
+}
+
+@keyframes granta{
+  100%{
+    stroke-dashoffset: 330;
+  }
+}
